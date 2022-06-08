@@ -28,3 +28,7 @@
 /* .numberFraction {
   background-color: lightgreen;
 } */
+.labelCaption {
+  color: red;
+  font-size: small;
+}
