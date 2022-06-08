@@ -1,21 +1,30 @@
+// import logo from "./logo.svg";
 import "./App.css";
+import React, { useState, Fragment } from "react";
 
 function App() {
+  const [mode, setMode] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div>
+        <h1>App Dashboard</h1>
+        <div className="flex-row">
+          <div className="flex-large">
+            <h2>Number Fraction</h2>
+          </div>
+          <div className="flex-large">
+            {mode ? (
+              <Fragment>
+                <h2>Interval Bar Chart</h2>
+              </Fragment>
+            ) : (
+              <Fragment>
+                <h2>Interval Bar Chart</h2>
+              </Fragment>
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
