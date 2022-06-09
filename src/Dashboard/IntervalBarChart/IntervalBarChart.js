@@ -18,7 +18,7 @@ const IntervalBarChart = (props) => {
   const handleSubmitStop = (event) => {
     event.preventDefault();
     setStop(false);
-    // console.log("myNumber:", myNumber);
+    console.log("myNumber:", myNumber);
 
     // setMyNumber();
     // event.target.reset();
