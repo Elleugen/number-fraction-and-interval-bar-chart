@@ -45,8 +45,8 @@ const NumberFraction = (props) => {
         console.log("currNumber::", currNumber);
         console.log("hasilMod::", pecahanBilangan);
         // numberFractionData.pop();
-        // numberFractionData.push({ bilangan: pecahanBilangan });
-        setNumberFractionData([...numberFractionData, pecahanBilangan]);
+        numberFractionData.push(pecahanBilangan);
+        // setNumberFractionData([...numberFractionData, pecahanBilangan]);
         console.log("numberFractionData::", numberFractionData);
         ctr = ctr * 10;
       }
@@ -104,11 +104,11 @@ const NumberFraction = (props) => {
         ) : null}
       </div>
       {/* <label className="labelCaption">{myNumber}</label> */}
-      {numberFractionData?.map((item, index) => {
-        console.log("item", item.bilangan);
+      {numberFractionData?.reverse().map((item, index) => {
+        console.log("item", item);
         return (
           <div key={index}>
-            <label className="labelCaption">{item?.bilangan}</label>
+            <label className="labelCaption">{item}</label>
           </div>
         );
       })}
