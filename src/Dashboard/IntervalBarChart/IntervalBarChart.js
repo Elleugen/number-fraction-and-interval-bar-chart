@@ -16,10 +16,11 @@ const IntervalBarChart = (props) => {
       setStop(true);
       console.log("myNumber:", myNumber);
 
+      delay();
       for (let i = 1; i <= myNumber; i++) {
         // setChartLabel([...chartLabel, i]);
         chartLabel.push(i);
-        console.log("chartLabel:", chartLabel);
+        // console.log("chartLabel:", chartLabel);
         let randValue = Math.floor(Math.random() * 100);
         chartData.push(randValue);
         if (randValue < 26) {
@@ -49,6 +50,12 @@ const IntervalBarChart = (props) => {
     setChartBackgroundColor([]);
     event.target.reset();
   };
+
+  function delay() {
+    setTimeout(() => {
+      console.log("ini time out 3 detik!!");
+    }, 3000);
+  }
   const state = {
     labels: chartLabel,
     datasets: [
